@@ -48,7 +48,7 @@ class StoryConfig(admin.ModelAdmin):
 
 class QuestionsConfig(admin.ModelAdmin):
     model = Questions
-    list_display = ('id', 'questions','answer','answer_hint','comprehension')
+    list_display = ('id', 'questions','answer','comprehension')
     ordering = ('id',)
 
 admin.site.register(UserAccounts,UserAccountsConfig)
