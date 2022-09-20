@@ -175,14 +175,12 @@ def get_story(request,test_type,level):
     questions = Questions.objects.filter(comprehension = story.values()[0]['id'])
     print(questions)
     q_list = []
-    hints = []
     for q in questions.values():
         q_list.append(q['questions'])
-        hints.append(q['answer_hint'])
     serializer = ComprehensionsSerializer(story, many=True)
     # print(serializer)
     # print(serializer.data)
-    return JsonResponse({1:serializer.data[0],2:q_list,3:hints})
+    return JsonResponse({1:serializer.data[0],2:q_list,})
 
 
 def getAnswersScore(questions,spoken_answer):
