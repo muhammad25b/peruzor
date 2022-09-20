@@ -121,7 +121,6 @@ class Questions(models.Model):
     answer2 = models.CharField(max_length=200, default="N/A")
     answer3 = models.CharField(max_length=200, default="N/A")
     answer4 = models.CharField(max_length=200, default="N/A")
-    answer_hint = models.CharField(max_length=200, default='null')
     comprehension = models.ForeignKey('Comprehensions', on_delete=models.CASCADE)
 
 
