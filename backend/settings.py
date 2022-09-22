@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'peruzor',
         'USER': 'root',
-        'PASSWORD': 'logical_Muhammad@2022',
+        'PASSWORD': 'password',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
@@ -101,7 +101,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'muhammadsiddiqi6268@gmail.com'
-EMAIL_HOST_PASSWORD = 'sojpctdkxfutesrt'
+EMAIL_HOST_PASSWORD = 'password'
 EMAIL_USE_TLS = True
 
 # Password validation
@@ -197,15 +197,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:3000",
 ]
-# CSRF_TRUSTED_ORIGINS = [
-#     "http://localhost:8000",
-#     "http://127.0.0.1:3000",
-#     "http://127.0.0.1:3001",
-#     "http://localhost:3001",
-#     ]
 
-# CORS_ALLOW_ALL_ORIGINS = True
-import dj_database_url
-prod_db = dj_database_url.config(conn_max_age = 500)
-DATABASES['DEFAULT'].update(prod_db)
+
 
